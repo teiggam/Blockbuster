@@ -8,26 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Tommy\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Maggie\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tommy\\Desktop\\C# May 2021 Class Repo\\Labs\\Blockbuster\\Blockbuster\\Blockbuster.csproj",
+      "projectUniqueName": "C:\\Users\\Maggie\\Documents\\Grand Circus\\Projects\\Blockbuster\\Blockbuster\\Blockbuster.csproj",
       "projectName": "Blockbuster",
-      "projectPath": "C:\\Users\\Tommy\\Desktop\\C# May 2021 Class Repo\\Labs\\Blockbuster\\Blockbuster\\Blockbuster.csproj",
-      "packagesPath": "C:\\Users\\Tommy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tommy\\Desktop\\C# May 2021 Class Repo\\Labs\\Blockbuster\\Blockbuster\\obj\\",
+      "projectPath": "C:\\Users\\Maggie\\Documents\\Grand Circus\\Projects\\Blockbuster\\Blockbuster\\Blockbuster.csproj",
+      "packagesPath": "C:\\Users\\Maggie\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Maggie\\Documents\\Grand Circus\\Projects\\Blockbuster\\Blockbuster\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Tommy\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Maggie\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -67,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

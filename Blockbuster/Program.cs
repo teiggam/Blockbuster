@@ -8,19 +8,36 @@ namespace Blockbuster
         static void Main(string[] args)
         {
 
-
-            //List<string> dieHardScenes = new List<string>() { "Plane scene", "Snape takes over the building","John McLane sneaks around", "Shoot out by the vault" };
-            //VHS v = new VHS("Die Hard", Genre.Action, 120, dieHardScenes);
-            //Console.WriteLine();
-
-            //List<string> meanGirls = new List<string>() { "First day at school", "You must wear pink on Wednesdays", "Riot scene", "Who's afraid of Regina?" };
-            //DVD d = new DVD("Mean Girls", Genre.Comedy, 133, meanGirls);
-
-            //d.Play();
             BlockBusterVideo bv = new BlockBusterVideo();
-            bv.PrintAllMovies();
-            bv.Checkout();
-   
+            bool goOn = true;
+            while (goOn == true)
+
+            {
+                bv.PrintAllMovies();
+                bv.Checkout();
+
+                goOn = GetContinue("Would you like to watch another movie?");
+            }
+            //Added a loop to check that VHS play method was still working properly.
+        }
+
+        static bool GetContinue(string message)
+        {
+            Console.WriteLine(message);
+            string answer = Console.ReadLine();
+            if (answer.ToLower().StartsWith("y"))
+            {
+                return true;
+            }
+            else if (answer.ToLower().StartsWith("n"))
+            {
+                Console.WriteLine("Have a great day!");
+                return false;
+            }
+            else
+            {
+                return GetContinue("I don't understand, please answer Y or N");
+            }
         }
     }
 }

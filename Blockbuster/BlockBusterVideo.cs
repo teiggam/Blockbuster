@@ -16,43 +16,31 @@ namespace Blockbuster
 
         public BlockBusterVideo()
         {
-            //Think of this constructor as stocking our shelves in block buster with Movies
+            //Need to initialize an instance of a DVD to put the DVD play
+            DVD d1 = new DVD();
             List<string> shrekScenes = new List<string>() { "What are you doing in my swamp", "Shrek meets Donkey", "Castle scene", "Dragon fight scene" };
-            DVD d = new DVD("Shrek", Genre.Drama, 120, shrekScenes);
-
-
+            Movie d = new Movie(d1, "Shrek", Genre.Drama, 120, shrekScenes);
             List<string> meanGirls = new List<string>() { "First day at school", "You must wear pink on Wednesdays", "Riot scene", "Who's afraid of Regina?" };
-            DVD d2 = new DVD("Mean Girls", Genre.Comedy, 133, meanGirls);
-            //You cant call the constructor on abstract classes
-            //In abstract classes constructors exist for the children 
-            //Think of the children!
-            //Movie m = new Movie("Shrek", Genre.Comedy, 95, shrekScenes);
+            Movie d2 = new Movie(d1, "Mean Girls", Genre.Comedy, 133, meanGirls);
 
 
+            VHS v1 = new VHS();
             List<string> dieHardScenes = new List<string>() { "Plane scene", "Snape takes over the building", "John McLane sneaks around", "Shoot out by the vault" };
-            VHS v = new VHS("Die Hard", Genre.Action, 120, dieHardScenes);
-
+            Movie v = new Movie(v1, "Die Hard", Genre.Action, 120, dieHardScenes);
             List<string> lordOfTheRingsScenes = new List<string>() { "Hobbiton", "Fireworks", "Mines of Moria", "Orcs attack" };
-            VHS v2 = new VHS("Fellowship of the Ring", Genre.Drama, 225, lordOfTheRingsScenes);
-
+            Movie v2 = new Movie(v1, "Fellowship of the Ring", Genre.Drama, 225, lordOfTheRingsScenes);
 
 
             Movies.Add(v);
-           // Movies.Add(m);
             Movies.Add(v2);
             Movies.Add(d);
             Movies.Add(d2);
         }
-
-        //2 Reasons why we can use the movie class
-        //1) Movie is public 
-        //2) Movie is in the same namespace as this class
         public Movie GetMovie(int index)
         {
             Movie m = Movies[index];
             return m;
         }
-
 
         public void PrintAllMovies()
         {
@@ -63,7 +51,6 @@ namespace Blockbuster
                 Console.WriteLine($"{i}: {title}");
             }
         }
-
         public void Checkout()
         {
             Console.WriteLine($"What movie would you like to watch? 0 to {Movies.Count -1}");
@@ -72,7 +59,8 @@ namespace Blockbuster
 
             Movie m = GetMovie(index);
 
-            m.PlayWholeMovie();
+            //Switched from PlayWholeMovie to play, so DVD and VHS Play(); functionality would present.
+            m.Play(m.Scenes);
         }
     }
 }
